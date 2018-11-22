@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:map="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <fragment
+    android:id="@+id/map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="150dp"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    tools:context=".MapsActivity"/>
+
+  <RelativeLayout
+    android:id="@+id/ll_ui_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:id="@+id/ll_result_info_container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:padding="8dp"
+      android:gravity="center_horizontal"
+      android:orientation="horizontal">
+
+      <TextView
+        android:id="@+id/tv_distance_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         style="@style/TextVewBold"
+        android:text="@string/distance"/>
+
+      <TextView
+        android:id="@+id/tv_distance_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="30dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="19 km"/>
+
+      <TextView
+        android:id="@+id/tv_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextVewBold"
+        android:paddingLeft="8dp"
+        android:text="@string/time"/>
+      <TextView
+        android:id="@+id/tv_time_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="5 mim"/>
+    </LinearLayout>
+    <Button
+      android:id="@+id/but_generate_road"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_above="@+id/ll_result_info_container"
+      android:background="@color/colorBlack"
+      android:textColor="@color/colorWhite"
+      android:text="@string/generate_road"/>
+    <LinearLayout
+      android:id="@+id/ll_input_block_container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/but_generate_road"
+      android:orientation="horizontal">
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+          android:id="@+id/tv_locationA_label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/colorBlack"
+          android:text="@string/locationA"/>
+        <AutoCompleteTextView
+          android:id="@+id/autocomplete_tv_locationA"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="textPhonetic"
+          android:layout_above="@+id/but_generate_road"
+          android:layout_centerHorizontal="true"
+          android:background="@color/colorLightGrey"
+          android:minWidth="50dp"/>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="16dp"
+        android:orientation="vertical">
+        <TextView
+          android:id="@+id/tv_locationB_label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/colorBlack"
+          android:text="@string/locationB"/>
+
+        <AutoCompleteTextView
+          android:id="@+id/autocomplete_tv_locationB"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="textPhonetic"
+          android:layout_above="@+id/but_generate_road"
+          android:layout_toRightOf="@+id/et_location_a"
+          android:background="@color/colorLightGrey"
+          android:minWidth="50dp"/>
+      </LinearLayout>
+    </LinearLayout>
+  </RelativeLayout>
+</FrameLayout>

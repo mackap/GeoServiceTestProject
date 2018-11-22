@@ -1,0 +1,9 @@
+<resources>
+  <string name="app_name">GeoServiceProject</string>
+  <string name="title_activity_maps">Map</string>
+  <string name="distance">Distance</string>
+  <string name="time">Time</string>
+  <string name="generate_road">Generate road</string>
+  <string name="locationA">Location A</string>
+  <string name="locationB">Location B</string>
+</resources>

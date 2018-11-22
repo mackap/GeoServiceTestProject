@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "51634979296",
+    "firebase_url": "https://geoservicetestproject.firebaseio.com",
+    "project_id": "geoservicetestproject",
+    "storage_bucket": "geoservicetestproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51634979296:android:6c060687da4166a1",
+        "android_client_info": {
+          "package_name": "com.mackap.geoserviceproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "51634979296-nbkc2kdo5lvaqc7c8amfi1l11s4i72uc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9uUaU7B3kNZcAiZs7YferZeZGRr7xoro"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
